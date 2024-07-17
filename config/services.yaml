@@ -1,0 +1,18 @@
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    Poposki\KernelBundle\:
+        resource: '../src/'
+        exclude:
+            - '../Tests'
+
+    Poposki\KernelBundle\Infrastructure\Symfony\Messenger\Command\CommandBus:
+        arguments:
+            - '@messenger.bus.command'
+
+    Poposki\KernelBundle\Infrastructure\Symfony\Messenger\Query\QueryBus:
+        arguments:
+            - '@messenger.bus.query'

@@ -1,7 +1,7 @@
 {
     "name": "dpoposki/symfony-kernel",
-    "description": "A kernel library for the Symfony framework",
-    "type": "library",
+    "description": "A kernel bundle for the Symfony framework",
+    "type": "symfony-bundle",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -9,7 +9,8 @@
         "doctrine/doctrine-bundle": "^2.12",
         "symfony/framework-bundle": "7.0.*",
         "symfony/messenger": "7.0.*",
-        "symfony/validator": "7.0.*"
+        "symfony/validator": "7.0.*",
+        "symfony/yaml": "7.0.*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.11|^10.0",
@@ -17,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Poposki\\": "src/"
+            "Poposki\\KernelBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Poposki\\Tests\\": "tests/"
+            "Poposki\\KernelBundle\\Tests\\": "tests/"
         }
     },
     "license": "MIT",
